@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ScalableWebProject</groupId>
+  <artifactId>ScalableWebProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ScalableWebProject</name>
+  <description>This is a scalable web project</description>
+<developers>
+		<developer>
+			<name>Mehmet Ali Taştan</name>
+		</developer>
+	</developers>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<apache.commons>3.7</apache.commons>
+		<mapper.version>0.7.5</mapper.version>
+		<swagger.version>2.6.1</swagger.version>
+		<mockito.all.version>1.9.5</mockito.all.version>
+		<mockito.core.version>1.10.19</mockito.core.version>
+	</properties>
+
+	<dependencies>
+		<!-- Spring Dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		<!-- //End Spring Dependencies -->
+
+		<!-- Apache dependency -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons}</version>
+		</dependency>
+		<!-- //END Apache dependency -->
+
+		<!-- Mockito-all -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.all.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.core.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- //END Mockito-all -->
+
+		<!-- Swagger dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<!-- // END Swagger dependencies -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<argLine>-Duser.timezone=UTC</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
