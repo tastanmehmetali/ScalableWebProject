@@ -53,7 +53,8 @@ REST service for any clients (*Mobile*, *Web* or external app as like *postman* 
 SpringBoot, a famous and commonly used framework , is used to develop for the application. SpringBoot has a lot of advantages as like embeded tomcat (not need to download tomcat) etc.
 
 ### Storage
-The decision is an in-Memory hash map for storage. The assignment is focused how to scale more easily and get more performance. Decided architecture (an Hexagonal Architecture) gives flexibility to choose or change the storage structure.
+The decision is an in-Memory hash map for storage. (Hash map has <key, value> pair. Also, key is given id and value is given data.)
+The assignment is focused how to scale more easily and get more performance. Decided architecture (an Hexagonal Architecture) gives flexibility to choose or change the storage structure.
 
 ## Suggestions for improvement
 The project can be improved.
