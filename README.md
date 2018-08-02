@@ -30,7 +30,7 @@ All tests should be run and pass after the project should be build. Then run:
 	java -jar target/ScalableWebProject-0.0.1-SNAPSHOT.jar
 
 ## Endpoints
-The application will be running on localhost:8080 (<host>) and the following endpoints will be available:
+The application will be running on localhost:8080 (\<host\>) and the following endpoints will be available:
 
 |     Type       |Service                        
 |----------------|-------------------------------
