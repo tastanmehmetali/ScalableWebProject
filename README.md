@@ -59,8 +59,11 @@ The decision is an in-Memory hash map for storage. The assignment is focused how
 The project can be improved.
 
 **Docker:** The application can be run on container (adding a dockerfile )
+
 **Database:** The application can use the real database for scalebility.
+
 **Log Management :** to show more details and easy to understand for log systems as like *ELK (Elasticsearch, Logstash, Kibana)* 
+
 **Load Balancer:** The request can be distribute the load.
 
 
