@@ -25,7 +25,7 @@ public class DiffServiceImpl implements DiffService {
 	public static final String REQUIRED_PARAMETER_CAN_NOT_BE_EMPTY = "%s, required parameter, cannot be empty";
 	public static final String NOT_FOUND_ENTITY_FOR_GIVEN_ID = "Not found any entity for given id, %s";
 
-	@Autowired
+    @Autowired
 	DiffDao diffDao;
 
 	/**

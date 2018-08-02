@@ -1,5 +1,7 @@
 package com.waes.assignment.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +29,8 @@ import com.waes.assignment.util.enums.DiffResultEnum;
 @RestController
 @RequestMapping("/v1/diff/{ID}")
 public class DiffRestController {
-
+	private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private DiffService diffService;
 
@@ -46,6 +49,7 @@ public class DiffRestController {
 			ResultDiffDto diffResultDTO = new ResultDiffDto(diffService.getDifference(givenId));
 			return new ResponseEntity<>(diffResultDTO, HttpStatus.OK);
 		} catch (NotFoundException entityNotFoundException) {
+			LOGGER.error(entityNotFoundException.getMessage());
 			return new ResponseEntity<>(new ResultDiffDto(DiffResultEnum.NOT_FOUND), HttpStatus.NOT_FOUND);
 		}
 	}
